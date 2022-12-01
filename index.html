@@ -39,17 +39,17 @@
                 </div>
                 <button class="button">Download</button>
             </div>
-            <div class="form">
-                <div class="form__title">
+            <form class="form">
+                <label class="form__title">
                     Try Your&nbsp;<span class="orange"> FREE </span>&nbsp;Trial Today
-                </div>
+                </label>
                 <div class="inputs">
-                    <input class="input" type="text" placeholder="Name">
-                    <input class="input" type="email" placeholder="Email">
-                    <input class="input" type="password" placeholder="Password">
+                    <input name="name" class="input" type="text" placeholder="Name">
+                    <input name="email" class="input" type="email" placeholder="Email">
+                    <input name="pass" class="input" type="password" placeholder="Password">
                 </div>
                 <input class="submit" type="submit" value="Get Started">
-            </div>
+            </form>
         </div>
     </div>
     <div class="social-media-block">
@@ -278,15 +278,17 @@
         <h2>contact us</h2>
         <div class="separator"></div>
         <h5 class="extra-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
-        <div class="inputs-wrap">
-            <div class="inputs-column">
-                <textarea class="textarea input" type="text" placeholder="Name"></textarea>
-                <textarea class="textarea input" type="email" placeholder="Email"></textarea>
-                <textarea class="textarea input" type="password" placeholder="Password"></textarea>
+        <form class="block-contact__form">
+            <div class="inputs-wrap">
+                <div class="inputs-column">
+                    <textarea name="name" class="textarea input" type="text" placeholder="Name"></textarea>
+                    <textarea name="email" class="textarea input" type="email" placeholder="Email"></textarea>
+                    <textarea name="password" class="textarea input" type="password" placeholder="Password"></textarea>
+                </div>
+                <textarea name="message" class="textarea input message" type="text" placeholder="Message"></textarea>
             </div>
-            <textarea class="textarea input message" type="text" placeholder="Message"></textarea>
-        </div>
-        <input class="submit" type="submit" value="Send Message">
+            <button name="submit" type="submit" class="submit">Send Message</button>
+        </form>
     </div>
     <div class="footer">
         <div class="icons-footer">
