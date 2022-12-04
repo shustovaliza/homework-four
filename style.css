@@ -444,11 +444,9 @@ h2 {
     text-transform: uppercase;
 }
 
-.separator {
-    width: 170px;
-    height: 0px;
-    margin: 0px;
+.block-awesome .separator {
     border: 1px solid #EC7979;
+    margin-top: 0px;
 }
 
 .extra-text {
@@ -532,6 +530,11 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.block-pricing .separator {
+    border: 1px solid #EC7979;
+    margin-top: 0px;
 }
 
 .prices-wrap {
@@ -619,6 +622,11 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.block-customers .separator {
+    border: 1px solid #EC7979;
+    margin-top: 0px;
 }
 
 .reviews-wrap {
@@ -725,6 +733,7 @@ h2 {
 }
 
 .block-design .separator {
+    margin-top: 0px;
     border: 1px solid #FFFFFF;
 }
 
@@ -743,6 +752,12 @@ h2 {
     align-items: center;
     height: 722px;
 }
+
+.block-contact .separator {
+    border: 1px solid #EC7979;
+    margin-top: 0px;
+}
+
 .block-contact__form {
     display: flex;
     flex-direction: column;
