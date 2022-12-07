@@ -58,6 +58,22 @@
         url(fonts/Raleway-Medium.eot) format('eot');
 }
 
+$darkgray: #333333;
+$orange: #EC7979;
+$formcolor: #BDBDBD;
+$pink: #F8EFEF;
+$lightgray: #86878B;
+$tabscolor: #C6CBCD;
+$pricing: #F5F5F5;
+
+@mixin fonts ($ff, $fs, $fw, $fsz, $lh) {
+    font-family: $ff;
+    font-style: $fs;
+    font-weight: $fw;
+    font-size: $fsz;
+    line-height: $lh;
+}
+
 body {
     margin: 0px;
     width: 1510px;
@@ -104,11 +120,7 @@ body {
 
 .menu__section {
     color: white;
-    font-family: 'Open Sans Semibold';
-    font-style: Semibold;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 19px;
+    @include fonts (Open Sans Semibold, Semibold, 600, 14px, 19px);
     width: 114px;
     height: 75px;
     display: flex;
@@ -139,11 +151,7 @@ body {
 }
 
 .first-block__text__one {
-    font-family: 'Raleway Medium';
-    font-style: Medium;
-    font-weight: 500;
-    font-size: 48px;
-    line-height: 56px;
+    @include fonts(Raleway Medium, Medium, 500, 48px, 56px);
     color: white;
     margin-top: 73px;
 }
@@ -158,11 +166,7 @@ body {
 .first-block__text__two {
     width: 270px;
     height: 42px;
-    font-family: 'Raleway Regular';
-    font-style: Regular;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
+    @include fonts(Raleway Regular, Regular, 400, 18px, 21px);
     color: white;
     margin-top: 42px;
     margin-bottom: 42px;
@@ -171,10 +175,7 @@ body {
 .button {
     width: 270px;
     height: 58px;
-    font-family: 'Open Sans Semibold';
-    font-style: Semibold;
-    font-weight: 600;
-    font-size: 18px;
+    @include fonts(Open Sans Semibold, Semibold, 600, 18px, 0);
     background: none;
     color: white;
     border: 2px solid white;
@@ -189,18 +190,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 .form__title {
     width: 367px;
     height: 90px;
-    font-family: 'Open Sans Bold';
-    font-style: Bold;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 33px;
-    color: #333333;
+    @include fonts(Open Sans Bold, Bold, 700, 24px, 33px);
+    color: $darkgray;
     text-transform: uppercase;
     display: flex;
     align-items: center;
@@ -208,7 +204,7 @@ body {
 }
 
 .orange {
-    color: #EC7979;
+    color: $orange;
 }
 
 .inputs {
@@ -218,37 +214,28 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
 }
 
 .input {
     width: 370px;
     height: 48px;
     margin-top: 33px;
-    font-family: 'Open Sans Regular';
-    font-style: Regular;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
-    color: #BDBDBD;
+    @include fonts(Open Sans Regular, Regular, 400, 14px, 19px);
+    color: $formcolor;
     display: flex;
     align-items: center;
     border: none;
-    border-bottom: 1px solid #BDBDBD;
+    border-bottom: 1px solid $formcolor;
 }
 
 .submit {
     width: 470px;
     height: 60px;
-    font-family: 'Open Sans Semibold';
-    font-style: Semibold;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 20px;
+    @include fonts(Open Sans Semibold, Semibold, 600, 15px, 20px);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #EC7979;
+    background: $orange;
     border-radius: 0px 0px 10px 10px;
     color: white;
     border: none;
@@ -256,7 +243,7 @@ body {
 
 .social-media-block {
     height: 140px;
-    background: #F8EFEF;
+    background: $pink;
     display: flex;
 }
 
@@ -268,28 +255,20 @@ body {
 }
 
 .social-media-block__text__one {
-    font-family: 'Open Sans Bold';
-    font-style: Bold;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 33px;
+    @include fonts(Open Sans Bold, Bold, 700, 24px, 33px);
     display: flex;
     align-items: center;
     height: 60px;
-    color: #333333;
+    color: $darkgray;
 }
 
 .social-media-block__text__two {
-    font-family: 'Raleway Regular';
-    font-style: Regular;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
+    @include fonts(Raleway Regular, Regular, 400, 18px, 21px);
     display: flex;
     align-items: center;
     height: 42px;
     margin-top: 18px;
-    color: #86878B;
+    color: $lightgray;
 }
 
 .social-media-block__icons {
@@ -315,6 +294,7 @@ body {
 .tabs-section {
     height: 541px;
     width: 1170px;
+
 }
 
 .tabs-section__tabs {
@@ -323,31 +303,25 @@ body {
     flex-direction: row;
 }
 
-
 .tabs-section__tab {
     width: 203px;
     height: 40px;
-    border-bottom: 1px solid #C6CBCD;
-    font-family: 'Open Sans Regular';
-    font-style: Regular;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
-
+    border-bottom: 1px solid $tabscolor;
+    @include fonts(Open Sans Regular, Regular, 400, 14px, 19px);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #333333;
+    color: $darkgray;
 }
 
 .tab-one {
-    border: 1px solid #C6CBCD;
+    border: 1px solid $tabscolor;
     border-bottom: none;
     border-radius: 5px 5px 0px 0px;
 }
 
 .border {
-    border-bottom: 1px solid #C6CBCD;
+    border-bottom: 1px solid $tabscolor;
     height: 40px;
     width: 600px;
 }
@@ -355,9 +329,9 @@ body {
 .tabs-section__main-section {
     width: 1170px;
     height: 499px;
-    border-left: 1px solid #C6CBCD;
-    border-right: 1px solid #C6CBCD;
-    border-bottom: 1px solid #C6CBCD;
+    border-left: 1px solid $tabscolor;
+    border-right: 1px solid $tabscolor;
+    border-bottom: 1px solid $tabscolor;
     display: flex;
     flex-direction: row;
 }
@@ -367,33 +341,25 @@ body {
     display: flex;
     flex-direction: column;
     width: 570px;
-}
 
-.tabs-section__main-section__text-block h3 {
-    height: 124px;
-    font-family: 'Open Sans Bold';
-    font-style: Bold;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 41px;
-    display: flex;
-    align-items: center;
-    color: black;
-    margin: 0px;
-}
+    h3 {
+        height: 124px;
+        @include fonts(Open Sans Bold, Bold, 700, 30px, 41px);
+        display: flex;
+        align-items: center;
+        color: black;
+        margin: 0px;
+    }
 
-.tabs-section__main-section__text-block h5 {
-    margin: 0px;
-    margin-top: 27px;
-    font-family: 'Raleway Regular';
-    font-style: Regular;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-}
+    h5 {
+        margin: 0px;
+        margin-top: 27px;
+        @include fonts(Raleway Regular, Regular, 400, 18px, 21px);
+    }
 
-.tabs-section__main-section__text-block p {
-    margin: 0px;
+    p {
+        margin: 0px;
+    }
 }
 
 .exception {
@@ -404,16 +370,9 @@ body {
     width: 270px;
     height: 58px;
     margin-top: 27px;
-
-    background: #EC7979;
-
-    font-family: 'Open Sans Semibold';
-    font-style: Semibold;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 25px;
+    background: $orange;
+    @include fonts(Open Sans Semibold, Semibold, 600, 18px, 24px);
     align-items: center;
-
     color: white;
     border: none;
 }
@@ -427,6 +386,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .separator {
+        border: 1px solid $orange;
+        margin-top: 0px;
+    }
 }
 
 h2 {
@@ -434,11 +398,7 @@ h2 {
     margin-top: 50px;
     width: 1170px;
     height: 150px;
-    font-family: 'Raleway Regular';
-    font-style: Regular;
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 42px;
+    @include fonts(Raleway Regular, Regular, 400, 36px, 42px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -446,22 +406,13 @@ h2 {
     text-transform: uppercase;
 }
 
-.block-awesome .separator {
-    border: 1px solid #EC7979;
-    margin-top: 0px;
-}
-
 .extra-text {
     display: flex;
     justify-content: center;
     width: 1169px;
     height: 21px;
-    font-family: 'Raleway Regular';
-    font-style: Regular;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    color: #86878B;
+    @include fonts(Raleway Regular, Regular, 400, 18px, 21px);
+    color: $lightgray;
     margin: 0px;
     margin-top: 40px;
 }
@@ -487,7 +438,7 @@ h2 {
     width: 92px;
     height: 92px;
     border-radius: 100px;
-    border: 1px solid #EC7979;
+    border: 1px solid $orange;
     margin-top: 39px;
     margin-bottom: 39px;
     display: flex;
@@ -499,11 +450,7 @@ h2 {
     width: 369px;
     height: 100px;
     margin: 0px;
-    font-family: 'Open Sans Bold';
-    font-style: Bold;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 33px;
+    @include fonts(Open Sans Bold, Bold, 700, 24px, 33px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -515,11 +462,7 @@ h2 {
     height: 105px;
     margin: 0px;
     margin-top: 8px;
-    font-family: 'Raleway Regular';
-    font-style: Regular;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
+    @include fonts(Raleway Regular, Regular, 400, 18px, 21px);
     display: flex;
     align-items: center;
     text-align: center;
@@ -528,15 +471,15 @@ h2 {
 
 .block-pricing {
     height: 940px;
-    background: #F5F5F5;
+    background: $pricing;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
 
-.block-pricing .separator {
-    border: 1px solid #EC7979;
-    margin-top: 0px;
+    .separator {
+        border: 1px solid $orange;
+        margin-top: 0px;
+    }
 }
 
 .prices-wrap {
@@ -551,72 +494,49 @@ h2 {
 .price {
     width: 370px;
     height: 510px;
+
+    &:hover {
+        filter: drop-shadow(0px 4px 10px rgba(51, 51, 51, 0.2));
+        margin-top: -20px;
+    }
+}
+
+%prising-styles {
+    background: $darkgray;
+    border: 2px solid $pricing;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
 .price-category {
     height: 60px;
-    background: #333333;
-    border: 2px solid #F5F5F5;
-    font-family: 'Open Sans Bold';
-    font-style: Bold;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 33px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+    @extend %prising-styles;
+    @include fonts(Open Sans Bold, Bold, 700, 24px, 33px);
+
 }
 
 .how-much {
     height: 100px;
-    background: #333333;
-    border: 2px solid #F5F5F5;
-    font-family: 'Raleway Bold';
-    font-style: Bold;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+    @include fonts(Open Sans Bold, Bold, 700, 36px, 42px);
+    @extend %prising-styles;
 }
 
 .terms {
     height: 50px;
-    background: #333333;
-    border: 2px solid #F5F5F5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: rgba(255, 255, 255, 0.5);
-    font-family: 'Raleway Regular';
-    font-style: Regular;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
+    @extend %prising-styles;
+    @include fonts(Raleway Regular, Regular, 400, 18px, 21px);
 }
 
 .facilities {
     height: 50px;
     background: white;
-    border: 2px solid #F5F5F5;
-    font-family: 'Raleway Regular';
-    font-style: Regular;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include fonts(Raleway Regular, Regular, 400, 18px, 21px);
+    @extend %prising-styles;
     text-transform: capitalize;
-    color: #86878B;
-}
-
-.price:hover {
-    filter: drop-shadow(0px 4px 10px rgba(51, 51, 51, 0.2));
-    margin-top: -20px;
+    color: $lightgray;
 }
 
 .block-customers {
@@ -624,11 +544,11 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
 
-.block-customers .separator {
-    border: 1px solid #EC7979;
-    margin-top: 0px;
+    .separator {
+        border: 1px solid $orange;
+        margin-top: 0px;
+    }
 }
 
 .reviews-wrap {
@@ -651,28 +571,24 @@ h2 {
     height: 180px;
     background: #E2E2E2;
     border-radius: 10px;
-    font-family: 'Raleway Regular';
-    font-style: Regular;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
+    @include fonts(Raleway Regular, Regular, 400, 18px, 21px);
     display: flex;
     align-items: center;
     text-align: center;
-    color: #86878B;
+    color: $lightgray;
     padding: 10px;
-}
 
-.review::after {
-    content: "";
-    margin-left: 65px;
-    margin-top: 220px;
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 20px solid #E2E2E2;
+    &:after {
+        content: "";
+        margin-left: 65px;
+        margin-top: 220px;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 20px solid #E2E2E2;
+    }
 }
 
 .photo-name-job {
@@ -695,26 +611,17 @@ h2 {
 
 .name {
     height: 54px;
-    font-family: 'Open Sans Bold';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 33px;
+    @include fonts(Open Sans Bold, normal, 700, 24px, 33px);
     display: flex;
     align-items: center;
     text-transform: capitalize;
     color: black;
-
 }
 
 .job {
     height: 21px;
     margin-top: 15px;
-    font-family: 'Raleway Regular';
-    font-style: Regular;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
+    @include fonts(Raleway Regular, Regular, 400, 18px, 21px);
     display: flex;
     align-items: center;
     color: black;
@@ -728,24 +635,24 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
 
-.block-design h2 {
-    color: white;
-}
+    h2 {
+        color: white;
+    }
 
-.block-design .separator {
-    margin-top: 0px;
-    border: 1px solid #FFFFFF;
-}
+    .separator {
+        margin-top: 0px;
+        border: 1px solid white;
+    }
 
-.block-design .extra-text {
-    color: #FFFFFF;
-}
+    .extra-text {
+        color: white;
+    }
 
-.block-design .button {
-    width: 370px;
-    margin-top: 73px;
+    .button {
+        width: 370px;
+        margin-top: 73px;
+    }
 }
 
 .block-contact {
@@ -753,11 +660,18 @@ h2 {
     flex-direction: column;
     align-items: center;
     height: 722px;
-}
 
-.block-contact .separator {
-    border: 1px solid #EC7979;
-    margin-top: 0px;
+    .separator {
+        border: 1px solid $orange;
+        margin-top: 0px;
+    }
+
+    .submit {
+        width: 370px;
+        height: 58px;
+        margin-top: 50px;
+        border-radius: 0px;
+    }
 }
 
 .block-contact__form {
@@ -791,13 +705,6 @@ h2 {
     height: 215px;
 }
 
-.block-contact .submit {
-    width: 370px;
-    height: 58px;
-    margin-top: 50px;
-    border-radius: 0px;
-}
-
 .footer {
     height: 164px;
     background: black;
@@ -815,14 +722,9 @@ h2 {
 }
 
 .footer-text {
-    font-family: 'Raleway Regular';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
+    @include fonts(Raleway Regular, normal, 400, 18px, 21px);
     display: flex;
     align-items: center;
     margin-top: 35px;
-
     color: rgba(255, 255, 255, 0.5);
 }
